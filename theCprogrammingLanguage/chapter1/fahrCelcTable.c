@@ -2,11 +2,7 @@
 
 int main() {
     float fahr, celsius;
-    float lower, upper, step;
-
-    lower = 0;      // Lower limit of the temperature scale
-    upper = 300;    // Upper limit of the temperature scale
-    step = 20;      // Step size
+    float lower = 0, upper = 300, step = 20;
 
     fahr = lower;
     printf("\nFahrenhiet\tCelcius\n");
