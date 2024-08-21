@@ -8,19 +8,21 @@ int main()
     for(int i = 0; i<n-1; i++)
         {
             min = i;
-            for(int j = i+1; j<n; j++)
+            for(int j = i + 1; j<n; j++)
             {
                 if(array[j] < array[min])
-                {
-                    min = j;
-                }
+                    {
+                        min = j;
+                    }
             }
+
             if(min != i)
             {
-                int temp = array[min];
-                array[min] = array[i];
-                array[i] = temp;
+                int temp = array[i];
+                array[i] = array[min];
+                array[min] = temp;
             }
+
         }
 
     printf("Array: ");
