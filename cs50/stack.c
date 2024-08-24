@@ -36,6 +36,7 @@ int main()
             loop = false;
         }
     }
+    free(stack);
     return 0;
 }
 
