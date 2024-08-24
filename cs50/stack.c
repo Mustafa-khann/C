@@ -42,11 +42,22 @@ int main()
 
 void push(int n )
 {
-    stack[++top] = n;
+    if (top >= 9) {
+        printf("Stack is full\n");
+        return;
+    }
+    top++;
+    stack[top] = n;
     printf("Element Pushed into the stack\n");
 }
 
 int pop()
 {
-    return stack[--top];
+    if (top == -1) {
+            printf("Stack is empty\n");
+            return -1;
+        }
+        int poppedValue = stack[top];
+        top--;
+        return poppedValue;
 }
