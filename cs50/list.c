@@ -1,9 +1,25 @@
 #include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(){
-    int list[3];
 
-    list[0] = 2;
+typedef struct node {
+    int number;
+    struct node *next;
+} node;
 
-    return 0;
+int main(int argc, char *argv[])
+{
+    node *list = NULL;
+
+    for(int i = 1; i<argc; i++)
+        {
+            int number = atoi(argv[i]);
+
+            node *head = malloc(sizeof(node));
+            if(head == NULL)
+                {
+                    // free memory thus far
+                }
+        }
 }
